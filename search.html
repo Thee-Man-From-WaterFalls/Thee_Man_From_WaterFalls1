@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Adding favicon for the browser tab -->
+  <link rel="icon" type="png" href="img/icon.png" />
+  <!-- Adding FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Linking external CSS for the search page styling -->
+  <link rel="stylesheet" href="css/search.css" />
+  <!-- Title of the webpage that appears in the browser tab -->
+  <title>search</title>
+</head>
+
+<body>
+  <div class="pc">
+    <!-- Navigation section for navigating through different pages -->
+    <nav>
+      <ul>
+        <!-- Navigation button with a location icon, links to the homepage (index.html) -->
+        <li><a href="index.html"><i class="fa-solid fa-location-arrow"></i></a></li>
+        <!-- Search button with a magnifying glass icon, links to search page, marked as active -->
+        <li><a class="active" href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+        <!-- World view button with an earth icon, links to global weather page -->
+        <li><a href="world.html"><i class="fa-solid fa-earth-americas"></i></a></li>
+      </ul>
+    </nav>
+
+    <!-- Main section for the search functionality -->
+    <h3>Search For City</h3>
+
+    <!-- Search input box for city, state, or country names -->
+    <div class="search">
+      <!-- Search icon next to the input field -->
+      <div class="search-icon"><i class="fa-solid fa-location-dot"></i></div>
+      <!-- Text input field for entering search query -->
+      <input class="searchinput" type="text" placeholder="search...">
+    </div>
+
+    <!-- Message providing instructions to the user on how to search -->
+    <div class="message">
+      <p>You have the option to search by city, state, or country names.</p>
+    </div>
+
+    <!-- Error message to be displayed if a location is not found -->
+    <div class="error-message">
+      <p>One of the specified locations (city, state, or country) was not found. Please try again</p>
+    </div>
+
+    <!-- Section to display the weather details of the searched location -->
+    <div class="return">
+      <div class="box">
+        <!-- Weather box showing city name, temperature, and weather icon -->
+        <div class="weather-box">
+          <div class="name">
+            <!-- City name -->
+            <div class="city-name">Landon</div>
+            <!-- Weather temperature -->
+            <div class="weather-temp">20°</div>
+          </div>
+          <!-- Weather icon for the current weather condition -->
+          <div class="weather-icon"><img class="weather-img" src="img/haze.png" alt=""></div>
+        </div>
+
+        <!-- Weather description boxes (first row) -->
+        <div class="weather-desc">
+          <!-- Box for wind speed -->
+          <div class="desc-box">
+            <!-- Wind icon -->
+            <div class="desc-icon"><i class="fa-solid fa-wind"></i></div>
+            <!-- Label for wind -->
+            <div class="desc-name">Wind</div>
+            <!-- Wind speed value -->
+            <div class="desc-info wind">15 m/s</div>
+          </div>
+
+          <!-- Box for pressure -->
+          <div class="desc-box">
+            <!-- Pressure icon -->
+            <div class="desc-icon"><i class="fa-solid fa-temperature-full"></i></div>
+            <!-- Label for pressure -->
+            <div class="desc-name">Pressure</div>
+            <!-- Pressure value -->
+            <div class="desc-info pressure">15 mbar</div>
+          </div>
+
+          <!-- Box for humidity -->
+          <div class="desc-box">
+            <!-- Humidity icon -->
+            <div class="desc-icon"><i class="fa-solid fa-droplet"></i></div>
+            <!-- Label for humidity -->
+            <div class="desc-name">Humidity</div>
+            <!-- Humidity value -->
+            <div class="desc-info humidity">50%</div>
+          </div>
+        </div>
+
+        <!-- Weather description boxes (second row) -->
+        <div class="weather-desc">
+          <!-- Box for sunrise time -->
+          <div class="desc-box">
+            <!-- Sunrise icon -->
+            <div class="desc-icon"><i class="fa-solid fa-sun"></i></div>
+            <!-- Label for sunrise -->
+            <div class="desc-name">Sun Rise</div>
+            <!-- Sunrise time value -->
+            <div class="desc-info sunrise">12:00:00</div>
+          </div>
+
+          <!-- Box for sunset time -->
+          <div class="desc-box">
+            <!-- Sunset icon -->
+            <div class="desc-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+            <!-- Label for sunset -->
+            <div class="desc-name">Sun Set</div>
+            <!-- Sunset time value -->
+            <div class="desc-info sunset">12:00:00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript file for handling search functionality and dynamic data loading -->
+  <script src="js/search.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Adding favicon for the browser tab -->
+    <link rel="icon" type="png" href="img/icon.png" />
+    <!-- Adding FontAwesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Linking external CSS for custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Title of the webpage that appears in the browser tab -->
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <div class="pc">
+      <!-- Navigation section for navigating through different pages -->
+      <nav>
+        <ul>
+          <!-- Navigation button with a location icon, links to the homepage (index.html) -->
+          <li>
+            <a class="active" href="index.html"
+              ><i class="fa-solid fa-location-arrow"></i
+            ></a>
+          </li>
+          <!-- Search button with a magnifying glass icon, links to search page -->
+          <li>
+            <a href="search.html"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></a>
+          </li>
+          <!-- World view button with an earth icon, links to global weather page -->
+          <li>
+            <a href="world.html"
+              ><i class="fa-solid fa-earth-americas"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main section where weather details are displayed -->
+      <div id="screen">
+        <!-- City name section, displays current city -->
+        <div class="city-name">
+          <!-- Pin icon before the city name -->
+          <i class="fa-solid fa-map-pin"></i>
+          <!-- City name displayed dynamically -->
+          <h1 id="city-name">location loading</h1>
+        </div>
+
+        <!-- Weather icon section, displays weather icon (e.g. sun, cloud) -->
+        <div class="weather-icon-css">
+          <img class="weather-icon" src="img/sun.png" />
+        </div>
+
+        <!-- Section for showing detailed weather information -->
+        <div class="weather-description">
+          <!-- Current temperature displayed dynamically -->
+          <div class="show-metric" id="metric">0</div>
+          <div class="weather-details">
+            <!-- Main weather condition, displayed dynamically -->
+            <div class="weather-main" id="weather-main">0</div>
+            <div class="h-f">
+              <!-- Humidity and feels-like temperature displayed side by side -->
+              <div class="show-humidity">
+                H: <span id="humidity">O</span>
+              </div>
+              ||
+              <div class="show-humidity">
+                F: <span id="feels-like">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Today's weather forecast section -->
+        <div class="forcasts-box">
+          <!-- Title and weather data for today -->
+          <div class="today-forecast">
+            <h4>TODAY</h4>
+            <!-- Weather icon for today -->
+            <div class="weather-icon-today">
+              <img class="weather-icons" src="img/sun.png" />
+            </div>
+            <!-- Minimum and maximum temperatures for today -->
+            <div class="temp-today">
+              <span id="temp-min-today">50°</span><span>/ </span
+              ><span id="temp-max-today">55°</span>
+            </div>
+            <!-- Main weather condition for today -->
+            <div class="weather-main-today" id="weather-main">Sunny</div>
+          </div>
+
+          <!-- Forecast for the next 6 days -->
+          <div class="forecast">
+            <h5>6-DAYS FORECAST</h5>
+            <!-- Placeholder for forecast data to be dynamically loaded -->
+            <div id="forecast-box"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      
+    </footer>
+
+    <!-- Linking the JavaScript file to add functionality to the app -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
